@@ -3,10 +3,10 @@ from .views import AuthorViewSet, BookViewSet
 from rest_framework.routers import DefaultRouter
 
 router_author = DefaultRouter()
-router_author.register('author', AuthorViewSet, basename='author')
+router_author.register('', AuthorViewSet, basename='author')
 
 router_book = DefaultRouter()
-router_book.register('book', BookViewSet, basename='book')
+router_book.register('', BookViewSet, basename='book')
 
 urlpatterns = [
     path('author/', include(router_author.urls)),
