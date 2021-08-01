@@ -8,14 +8,16 @@ class Author(models.Model):
     edit_date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return self.name, self.surname, self.birth
+        return f'{self.name} {self.surname}'
 
 class Book(models.Model):
     name = models.CharField(max_length=100)
-    authors = models.CharField(max_length=100, default='')
+    author = models.ManyToManyField(Author)
     create_date = models.DateTimeField(auto_now_add=True)
     edit_date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return self.name
+
+
 
