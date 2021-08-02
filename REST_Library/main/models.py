@@ -3,7 +3,7 @@ from django.db import models
 class Author(models.Model):
     name = models.CharField(max_length=100)
     surname = models.CharField(max_length=100)
-    birth = models.CharField(max_length=100)
+    birth = models.IntegerField()
     create_date = models.DateTimeField(auto_now_add=True)
     edit_date = models.DateTimeField(auto_now=True)
 
