@@ -76,8 +76,12 @@ WSGI_APPLICATION = 'REST_Library.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'gvespbsq',
+        'USER': 'gvespbsq',
+        'PASSWORD': 'reavyJ2BJZLGdEwsz_PIvnopKF5-7Oqn',
+        'HOST': 'hattie.db.elephantsql.com',
+        'PORT': '5432'
     }
 }
 
